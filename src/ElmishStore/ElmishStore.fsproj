@@ -22,6 +22,7 @@
     <Compile Include="UseSyncExternalStore.fs" />
     <Compile Include="ElmishStore.fs" />
     <Compile Include="Hooks.fs" />
+    <Compile Include="Extensions.fs" />
   </ItemGroup>
   <ItemGroup>
       <Content Include="*.fsproj; *.fs" Exclude="**\*.fs.js" PackagePath="fable\" />
