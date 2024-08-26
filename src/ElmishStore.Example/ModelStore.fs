@@ -22,11 +22,18 @@ let store =
         #endif
     storesHost.create "main" program
 
+(*
 [<Hook>]
 let useSelector (selector: Model -> 'a) = React.useElmishStore (store, selector)
 
 [<Hook>]
 let useSelectorMemoized (memoizedSelector: Model -> 'a) =
   React.useElmishStoreMemoized (store, memoizedSelector)
+*)
+
+let storeApi = StoreApi.getStoreApi store
+
+let inline useSelector selector = storeApi.useSelector selector
+let inline useSelectorMemoized selector = storeApi.useSelectorMemoized selector
 
 let dispatch = store.Dispatch
